@@ -12,7 +12,8 @@ def playAgain():
         elif "n" in answer:
                 exit()
         else:
-                exit()
+                print("please enter only 'y' or 'n'")
+                playAgain()
 
 def openingLines():
         print('You wake up late at night and decide to head outside to smell the fresh air.')
@@ -74,6 +75,54 @@ def scenarioThree():
         else:
                 print('please enter only "1" or "2".\n')
                 scenarioThree()
+def scenarioFour():
+        print("the rush of the chase has the adrenaline in your body pumping")
+        print("the spot you found to hide was a seemingly abandoned house. you have parked your car behind it to avoid detection")
+        print("eventually, you can hear the agent whiz past you; you're safe for now.\n")
+        print("you're a bit bored and feel the urge to do something adventurous.\n")
+        print("should you:")
+        print("1. go check out the ominous forest that looks like a deathtrap")
+        print("2. go inside the house and explore")
+
+        answer = input(">")
+        if answer == "1":
+                print("you enter the forest and feel a presence enter your soul.")
+                print("you can't really describe the feeling, but might compare it to the feeling of contentment.")
+                scenarioFiveA()
+        if answer == "2":
+                print("you enter the house and the floor seems very unstable")
+                print("a few steps in and the floor falls through (imagine that.)")
+                print("you land to find the basement peculiarly in great shape. ")
+                print("\nwhat's going on down here??")
+                scenarioFiveB()
+        else:
+                print('please enter only "1" or "2".\n')
+                scenarioFour()
+def scenarioFiveA():
+        print("\nyou can fight the feeling, but do you?")
+        print("1. fight the feeling")
+        print("2. let the feeling take over")
+
+        answer = input(">")
+        if answer == "1":
+                print("FIGHT FEELING STUFF")
+        if answer == "2":
+                print("the feeling makes its course through your body and ")
+                gameOver("reason.")
+        else:
+                print('please enter only "1" or "2".\n')
+                scenarioFiveA()
+def scenarioFiveB():
+        print("1.")
+        print("2.")
+        answer = input(">")
+        if answer == "1":
+                print("one")
+        if answer == "2":
+                print("two ")
+        else:
+                print('please enter only "1" or "2".\n')
+                scenarioFiveB()
 openingLines()
 
 
